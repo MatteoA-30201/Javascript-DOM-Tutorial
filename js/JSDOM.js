@@ -51,7 +51,7 @@ searchBar.addEventListener("keyup", function(e){
   const term = e.target.value.toLowerCase();
   const books = list.getElementsByTagName("li");
   Array.from(books).forEach(function(book){
-    const title = books.firstElementChild.textContent;
+    const title = book.firstElementChild.textContent;
     if(title.toLowerCase().indexOf(term) !=-1){
       book.style.display = "block";     
     } else {
@@ -59,3 +59,4 @@ searchBar.addEventListener("keyup", function(e){
     }
   })
 })
+
